@@ -1,10 +1,8 @@
 # Terraform
---------------------------------
 ![image](https://github.com/user-attachments/assets/76b7dbaf-afc3-42ef-83fd-53e21c67d866)
 
 
 # Install Terraform
----------------------------------------
 
 # Ubuntu/Debian
 
@@ -24,50 +22,43 @@
 
 # The gpg command will report the key fingerprint:
 
-/usr/share/keyrings/hashicorp-archive-keyring.gpg
--------------------------------------------------
-pub   rsa4096 XXXX-XX-XX [SC]
-AAAA AAAA AAAA AAAA
-uid           [ unknown] HashiCorp Security (HashiCorp Package Signing) <security+packaging@hashicorp.com>
-sub   rsa4096 XXXX-XX-XX [E]
+    /usr/share/keyrings/hashicorp-archive-keyring.gpg
+    -------------------------------------------------
+    pub   rsa4096 XXXX-XX-XX [SC]
+    AAAA AAAA AAAA AAAA
+    uid           [ unknown] HashiCorp Security (HashiCorp Package Signing) <security+packaging@hashicorp.com>
+    sub   rsa4096 XXXX-XX-XX [E]
 
 
-$ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(grep -oP '(?<=UBUNTU_CODENAME=).*' /etc/os-release || lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
+# The lsb_release -cs command
+
+    echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(grep -oP '(?<=UBUNTU_CODENAME=).*' /etc/os-release || lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
 
 
 # Download the package information from HashiCorp.
-
-$ sudo apt update
+    sudo apt update
 
 # Install Terraform from the new repository.
-
-$ sudo apt-get install terraform
+    sudo apt-get install terraform
 
 # Verify the installation
-
-$ terraform -help
-
-
-# Usage: terraform [-version] [-help] <command> [args]
-
-The available commands for execution are listed below.
-The most common, useful commands are shown first, followed by
-less common or more advanced commands. If you're just getting
-started with Terraform, stick with the common commands. For the
-other commands, please read the help and docs before usage.
-##...
+    terraform -help
 
 
-$ terraform -help plan
+        Usage: terraform [-version] [-help] <command> [args]
+    The available commands for execution are listed below.
+    The most common, useful commands are shown first, followed by
+    less common or more advanced commands. If you're just getting
+    started with Terraform, stick with the common commands. For the
+    other commands, please read the help and docs before usage.
+    ##...
 
 
 # Enable tab completion
-
-touch ~/.bashrc
+    touch ~/.bashrc
 
 # Then install the autocomplete package.
-
-terraform -install-autocomplete
+    terraform -install-autocomplete
 
 
 
