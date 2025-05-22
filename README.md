@@ -44,8 +44,8 @@
 # Verify the installation
     terraform -help
 
-
-        Usage: terraform [-version] [-help] <command> [args]
+    --------------------------------------------------
+    Usage: terraform [-version] [-help] <command> [args]
     The available commands for execution are listed below.
     The most common, useful commands are shown first, followed by
     less common or more advanced commands. If you're just getting
