@@ -1,22 +1,25 @@
+# Terraform
+--------------------------------
+![image](https://github.com/user-attachments/assets/76b7dbaf-afc3-42ef-83fd-53e21c67d866)
+
+
 # Install Terraform
 ---------------------------------------
 
 # Ubuntu/Debian
 
-$ sudo apt-get update && sudo apt-get install -y gnupg software-properties-common
+    sudo apt-get update && sudo apt-get install -y gnupg software-properties-common
 
 # Install the HashiCorp GPG key.
-
-$ wget -O- https://apt.releases.hashicorp.com/gpg | \
-gpg --dearmor | \
-sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg > /dev/null
-
+    wget -O- https://apt.releases.hashicorp.com/gpg | \
+    gpg --dearmor | \
+    sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg > /dev/null
 
 # Verify the key's fingerprint.
 
-$ gpg --no-default-keyring \
---keyring /usr/share/keyrings/hashicorp-archive-keyring.gpg \
---fingerprint
+    gpg --no-default-keyring \
+    --keyring /usr/share/keyrings/hashicorp-archive-keyring.gpg \
+    --fingerprint
 
 
 # The gpg command will report the key fingerprint:
